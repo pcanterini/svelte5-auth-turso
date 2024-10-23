@@ -2,16 +2,20 @@
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
 
-## Creating a project
+## Set env vars
 
-If you're seeing this, you've probably already done this step. Congrats!
+Set your turso or sqlite env vars
 
 ```bash
-# create a new project in the current directory
-npx sv create
+# copy the example env file
+cp .env.example .env
 
-# create a new project in my-app
-npx sv create my-app
+# upcate Turso creds (if using Turso)
+DATABASE_URL="libsql://db-name-user.turso.io"
+DATABASE_AUTH_TOKEN="your-db-token"
+
+# push the schema/changes to the db
+npm run db:push
 ```
 
 ## Developing
